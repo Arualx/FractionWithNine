@@ -1,34 +1,34 @@
 # FractionWithNine
-Turn any recurring decimal number into a fraction containing the number nine.
+Turn any recurring decimal number into a fraction containing number 9 in the denominator.
+
+# Explanation
+1. Identify the part with whole number (let's call it {a})
+2. Identify the part without the repeating digits (let's call it {b})
+
+- Subtract {b} from {a} to get the numerator {n}.
+
 #
-Depending on the appearance of the inputted number a fraction will be automatically made with this code.
-In this document, the word recurring number will be shortened into {r} so it's more readable.
-#
-The fraction is made out of a numerator and denominator.
-#
-In the numerator part {n}, the whole number (of {r}) - we'll call this variable {a}, will be subtracted by, the whole number (of {r}) without the numbers that are repeated - we'll call this variable {b}.
+3. Identify the number of repeating digits in the decimal (let's call this {c})
+4. Identify the number of digits before the repeating part starts (call this {e})
 
-For example: 
+5. Create a denominator by combining {c} and {e}.
 
-The number 1.233333333... will be turned into 2 new numbers {a}, 123, and {b}, 12.
-Those 2 variables will be subtracted and will give a result {n}, 111.
-That will be put in the numerator part of the fraction.
-#
-The denominator part {d} is a bit tricky.
+- For {c}, use a number with {c} nines (like 9 for 1 digit, 99 for 2 digits, etc.)
+- For {e}, use a number with {e} zeros (like 0 for 1 digit, 00 for 2 digits, etc.)
 
-The number of digits in the repeated part (of {r}) - we'll call this variable {c}, will give an output of that same amount of digits but with the number 9.
+- Combine them by adding {c} and {e} together to form the denominator {d}.
 
-And the number of digits in the part behind the decimal that is non-repeated (of {r}) - we'll call this variable {e}, will give an output of the same amount of digits but with the number 0. 
+# Example
+For the number 1.23333333...:
 
-{c} and {e} will be added together and they will make the {d} of the fraction.
+- {a} = 123 (whole number with repeating part)
+- {b} = 12 (whole number without repeating part)
+- {n} = {a} - {b} = 123 - 12 = 111
 
-For example:
+- {c} = 1 (1 repeating digit)
+- {e} = 1 (1 non-repeating digit)
+- {d} = 9 (from {c}) + 0 (from {e}) = 90
 
-Still with the same number (1.233333333...).
-It will give 2 new results {c}, 1, and {e}, 1.
-Those two variables will turn into that many digits of those numbers so now, {c} is 9 and {e} is 0.
-They will be added together and give a result {d}, 90.
-That will be put in the denominator part of the fraction.
 #
 And that's how this code made that fraction.
 
