@@ -1,6 +1,6 @@
 # FractionWithNine
 Turn any recurring decimal number into a fraction containing number 9 in the denominator.
-
+#
 # Explanation
 1. Identify the part with whole number (let's call it {a})
 2. Identify the part without the repeating digits (let's call it {b})
@@ -17,7 +17,7 @@ Turn any recurring decimal number into a fraction containing number 9 in the den
 - For {e}, use a number with {e} zeros (like 0 for 1 digit, 00 for 2 digits, etc.)
 
 - Combine them by adding {c} and {e} together to form the denominator {d}.
-
+#
 # Example
 For the number 1.23333333...:
 
